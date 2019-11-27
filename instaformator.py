@@ -35,11 +35,16 @@ def generate_edged_image(filepath):
 	canvas = new_image_from_original_size(width, height)
 	canvas.paste(oImg, (xOffset, yOffset))
 
-
 	if not os.path.exists(export_directory):
 		os.mkdir(export_directory)
+
 	export_name = export_directory + "/" +  filepath[0:-4] + "_edged.jpg"
-	canvas.save(export_name , "JPEG")
+
+	if not os.path.exists(export_name):
+		canvas.save(export_name , "JPEG")
+		print("> Creates ", export_name)
+	else:
+		print(export_name, " already exists")
 
 
 export_directory = "Edged"
