@@ -30,7 +30,8 @@ def generate_edged_image(filepath):
 
 	else:
 		# image 1x1
-		return
+		width = oWidth
+		height = oHeight
 
 	canvas = new_image_from_original_size(width, height)
 	canvas.paste(oImg, (xOffset, yOffset))
