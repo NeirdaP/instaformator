@@ -53,7 +53,6 @@ def generate_edged_image(filename):
 
 export_directory = "Edged"
 
-imageFiles = [file for file in os.listdir() if file.endswith(".jpg")]
-
+imageFiles = [file for file in os.listdir(".") if file.endswith(".jpg")]
 for file in imageFiles:
     generate_edged_image(file)
