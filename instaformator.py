@@ -45,12 +45,11 @@ def generate_edged_image(filename):
     if not os.path.exists(publish_path):
         if not os.path.exists(export_path):
             canvas.save(export_path, "JPEG")
-            print("> Creates ", export_path)
+            print("> Creates {}".format(export_path))
         else:
-            print(export_path, " already exists")
+            print("{} already exists".format(export_path))
     else:
-        print(publish_path, " already exists")
-
+        print("{} already published".format(publish_path))
 
 export_directory = "Edged"
 
